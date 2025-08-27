@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="File di origine">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="File di intestazione">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="File di risorse">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="File di intestazione\common">
+      <UniqueIdentifier>{3c0be5c1-f925-42da-8e04-3d008837404b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di origine\imgui">
+      <UniqueIdentifier>{10bf2f5d-f3a1-4aa8-af82-678c74b2bdf5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Camera.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\imgui.cpp">
+      <Filter>File di origine\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\imgui_demo.cpp">
+      <Filter>File di origine\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\imgui_draw.cpp">
+      <Filter>File di origine\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\imgui_impl_glfw.cpp">
+      <Filter>File di origine\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\imgui_impl_opengl3.cpp">
+      <Filter>File di origine\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\imgui_tables.cpp">
+      <Filter>File di origine\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\imgui_widgets.cpp">
+      <Filter>File di origine\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\backends\imgui_impl_glfw.cpp">
+      <Filter>File di origine\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdparty\imgui\backends\imgui_impl_opengl3.cpp">
+      <Filter>File di origine\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Light.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\terrain_256.png">
+      <Filter>File di risorse</Filter>
+    </Image>
+    <Image Include="assets\small_test.png">
+      <Filter>File di risorse</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Camera.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\box3.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\carousel\carousel.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\carousel\carousel_loader.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\carousel\carousel_to_renderable.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\debugging.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\frame_buffer_object.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\gltf_loader.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\intersection.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\matrix_stack.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\path.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\openscad_loader.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\renderable.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\renderable_.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\shaders.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\simple_shapes.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\simple_shapes_.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\texture.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\trackball.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\view_manipulator.h">
+      <Filter>File di intestazione\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user_interface.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="src\globals.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Light.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\common\carousel\html\General.html" />
+    <None Include="src\shaders\terrain.vert" />
+    <None Include="src\shaders\basic.frag" />
+    <None Include="src\shaders\basic.vert" />
+    <None Include="src\shaders\track.vert" />
+    <None Include="src\shaders\skybox.vert" />
+    <None Include="src\shaders\skybox.frag" />
+    <None Include="src\shaders\model.vert" />
+    <None Include="src\shaders\terrain-track-model.frag" />
+    <None Include="src\shaders\light.vert" />
+    <None Include="src\shaders\light.frag" />
+    <None Include="src\shaders\visualize_depth.vert" />
+    <None Include="src\shaders\visualize_depth.frag" />
+    <None Include="src\shaders\light_model.vert" />
+    <None Include="src\shaders\show_frame.vert" />
+    <None Include="src\shaders\show_frame.frag" />
+  </ItemGroup>
+</Project>
