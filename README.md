@@ -1,6 +1,8 @@
 # 🚗 MyOwnCarousel
 ## Final Project for the Computer Graphics Course – University of Pisa
 
+<img width="778" height="476" alt="image" src="https://github.com/user-attachments/assets/f9f5f1d9-800f-42f6-8a57-2615a1e0dcf0" />
+
 This repository contains MyOwnCarousel, the final project developed by Andrea Angelici for the Computer Graphics course at the University of Pisa.
 
 The project is implemented in C++ using OpenGL, and is based on a framework created by the course's professor.
