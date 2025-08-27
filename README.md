@@ -19,13 +19,14 @@ MyOwnCarousel is a graphical simulation featuring cars moving along a track, wit
 ### 🧱 Technologies Used
 - C++
 - OpenGL (GLFW/GLEW/GLM/Dear ImGui/TinyGltf)
-- Visual Studio (Windows 64-bit)
+- Visual Studio 2022 (Windows 64-bit)
 
 ### 🚀 How to Run
 This project is distributed as a Visual Studio solution. To run it:
 
-1. Open the .sln file in Visual Studio (Windows 64-bit).
-2. Build and run the solution.
+1. Open the .sln file in Visual Studio 2022 (Windows 64-bit).
+2. From solution explorer, right click on MyOwnCarousel project, go to properties->configuration properties->working directory and set it to the "src" folder.
+3. Build and run the solution (it might not work at the first attempt, but after two attemts it should settle down).
 
 No additional build configuration is required.
 
@@ -34,8 +35,6 @@ No additional build configuration is required.
 <img width="778" height="476" alt="image" src="https://github.com/user-attachments/assets/f9f5f1d9-800f-42f6-8a57-2615a1e0dcf0" />
 <img width="735" height="723" alt="image" src="https://github.com/user-attachments/assets/51fb51d5-8c24-433c-9c3c-8139c848508a" />
 <img width="755" height="754" alt="image" src="https://github.com/user-attachments/assets/81c3ae78-d931-4cba-bac7-74019acdc820" />
-
-
 
 ### 🎥 Demo Video
 
