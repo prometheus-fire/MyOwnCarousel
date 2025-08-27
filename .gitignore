@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# do not ignore 3rd party libraries
+!MyOwnCarousel/3rdparty/
+!MyOwnCarousel/3rdparty/**
+
