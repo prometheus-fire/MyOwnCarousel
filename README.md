@@ -25,8 +25,8 @@ MyOwnCarousel is a graphical simulation featuring cars moving along a track, wit
 This project is distributed as a Visual Studio solution. To run it:
 
 1. Open the .sln file in Visual Studio 2022 (Windows 64-bit).
-2. From solution explorer, right click on MyOwnCarousel project, go to properties->configuration properties->working directory and set it to the "src" folder.
-3. Build and run the solution (it might not work at the first attempt, but after two attemts it should settle down).
+2. Set the working directory from properties->configuration properties->working directory to the "src" folder.
+3. Build and run the solution.
 
 No additional build configuration is required.
 
