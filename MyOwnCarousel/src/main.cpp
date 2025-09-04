@@ -191,6 +191,11 @@ void loadLights(shader& s) {
 	for (GLuint i = 1; i <= 30; i++) ids[i-1] = i;
 	glUniform1iv(s["depthmap"], 30, (const GLint *)ids);
 
+	/*
+		Texture bindings throughout the file never change,
+		so the texture activations can get called only once.
+	*/
+
 	if (!lights_initialized) {
 		lights_initialized = true;
 
@@ -198,26 +203,21 @@ void loadLights(shader& s) {
 		GLuint sun_depthmap = sun.getDepthMap();
 		glActiveTexture(GL_TEXTURE0 + 1);
 		glBindTexture(GL_TEXTURE_2D, sun_depthmap);
-		//glUniform1i(s["depthmap[0]"], 1);
 
 		// load lamp depthmaps
 		for (int i = 0; i < 19; i++) {
 			Light& l = lampLights[i];
 			GLuint l_depthmap = l.getDepthMap();
-			//std::string ldepth = "depthmap[" + std::to_string(i + 1) + "]";
 			glActiveTexture(GL_TEXTURE0 + 2 + i);
 			glBindTexture(GL_TEXTURE_2D, l_depthmap);
-			//glUniform1i(s[ldepth], 2 + i);
 		}
 
 		// load car lights
 		for (int i = 0; i < 10; i++) {
 			Light& l = carLights[i];
 			GLuint l_depthmap = l.getDepthMap();
-			//std::string ldepth = "depthmap[" + std::to_string(i + 20) + "]";
 			glActiveTexture(GL_TEXTURE0 + 21 + i);
 			glBindTexture(GL_TEXTURE_2D, l_depthmap);
-			//glUniform1i(s[ldepth], 21 + i);
 		}
 	}
 }
@@ -237,10 +237,10 @@ glm::vec3 skyColor(float daytime) {
 	float sunsetStart = 0.70;
 	float sunsetPeak = 0.75;
 
-	glm::vec3 finalColor = mix(nightColor, sunriseColor, glm::smoothstep(sunrisePeak - 0.05f, sunrisePeak, daytime));
-	finalColor = mix(finalColor, dayColor, glm::smoothstep(sunrisePeak, sunriseEnd, daytime));
-	finalColor = mix(finalColor, sunsetColor, glm::smoothstep(sunsetStart, sunsetPeak, daytime));
-	finalColor = mix(finalColor, nightColor, glm::smoothstep(sunsetPeak, sunsetPeak + 0.05f, daytime));
+	glm::vec3 finalColor = glm::mix(nightColor, sunriseColor, glm::smoothstep(sunrisePeak - 0.05f, sunrisePeak, daytime));
+	finalColor = glm::mix(finalColor, dayColor, glm::smoothstep(sunrisePeak, sunriseEnd, daytime));
+	finalColor = glm::mix(finalColor, sunsetColor, glm::smoothstep(sunsetStart, sunsetPeak, daytime));
+	finalColor = glm::mix(finalColor, nightColor, glm::smoothstep(sunsetPeak, sunsetPeak + 0.05f, daytime));
 
 	return finalColor;
 }

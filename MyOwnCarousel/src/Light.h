@@ -14,8 +14,11 @@
 */
 
 /*
-	This is the id of the shader used to
+	These are the shaders used to
 	render the scene from the light's point of view.
+
+	Update shader is used to rendered non instanced models (such as terrain/track)
+	and update shader models is used to rendered instanced models.
 */
 static bool update_shader_initialized = false;
 static shader update_shader;
@@ -33,9 +36,8 @@ public:
 
 	/*
 		This function updates the depth map buffer by rendering the scene
-		with update_shader.
+		from the light's point of view.
 	*/
-	// (glm::mat4 proj, glm::mat4 view, shader* replacement_shader = NULL, shader* replacemet_shader_models = NULL) 
 	void updateDepthMap(void (*render_scene)(glm::mat4 proj, glm::mat4 view, shader* replacement_shader, shader* replacemet_shader_models));
 
 	void setView(glm::mat4 view);
@@ -44,7 +46,6 @@ public:
 
 	GLuint getDepthMap();
 	GLuint getFBO();
-
 	glm::vec3 getColor();
 	glm::vec3 getLightDir();
 

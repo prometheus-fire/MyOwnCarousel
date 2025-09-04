@@ -6,15 +6,15 @@
 
 #include <iostream>
 
+/*
+	A simple fps camera class made using a gymbal.
+	At the current state it only uses pitch and yaw.
+*/
 
 enum Movement {
 	UP, DOWN, LEFT, RIGHT, FORWARD, BACKWARDS
 };
 
-/*
-	A simple fps camera class made using a gymbal.
-	At the current state it only uses pitch and yaw.
-*/
 
 class Camera
 {
@@ -25,10 +25,9 @@ public:
 		and setting position and up vectors.
 	*/
 	Camera(glm::vec3 position, glm::vec3 center, glm::vec3 up);
+
 	glm::mat4 getViewMatrix();
 	void lookAt(glm::vec3 position, glm::vec3 center);
-
-
 
 	/*
 		This variable controls whether or not mouse and
